@@ -1,21 +1,42 @@
 /* global describe, it */
 'use strict';
 
+var assert = require('proclaim');
+var pwcn = require('../../lib/client');
+
 describe('pa11y-webservice-client-node', function () {
 
-	it('should be a function');
-	it('should return an object');
+	it('should be a function', function () {
+		assert.isFunction(pwcn);
+	});
+
+	it('should return an object', function () {
+		assert.isObject(pwcn());
+	});
 
 	describe('[returned object]', function () {
 
-		it('should have a tasks property (object)');
-		it('should have a task method');
+		it('should have a tasks property (object)', function () {
+			assert.isObject(pwcn().tasks);
+		});
+
+		it('should have a task method', function () {
+			assert.isFunction(pwcn().task);
+		});
 
 		describe('.tasks', function () {
 
-			it('should have a create method');
-			it('should have a get method');
-			it('should have a results method');
+			it('should have a create method', function () {
+				assert.isFunction(pwcn().tasks.create);
+			});
+
+			it('should have a get method', function () {
+				assert.isFunction(pwcn().tasks.get);
+			});
+
+			it('should have a results method', function () {
+				assert.isFunction(pwcn().tasks.results);
+			});
 
 			describe('.create()', function () {
 
@@ -43,13 +64,23 @@ describe('pa11y-webservice-client-node', function () {
 
 		describe('.task()', function () {
 
-			it('should return an object');
+			it('should return an object', function () {
+				assert.isObject(pwcn().task());
+			});
 
 			describe('[returned object]', function () {
 
-				it('should have a get method');
-				it('should have a remove method');
-				it('should have a results method');
+				it('should have a get method', function () {
+					assert.isFunction(pwcn().task().get);
+				});
+
+				it('should have a remove method', function () {
+					assert.isFunction(pwcn().task().remove);
+				});
+
+				it('should have a results method', function () {
+					assert.isFunction(pwcn().task().results);
+				});
 
 				describe('.get()', function () {
 
