@@ -1,0 +1,32 @@
+{
+	"name": "pa11y-webservice-client-node",
+	"version": "0.0.0",
+	"private": true,
+
+	"description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
+	"keywords": [ "accessibility", "analysis", "client", "report", "web-service" ],
+	"contributors": [
+		"Rowan Manning (http://rowanmanning.com/)"
+	],
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nature/pa11y-webservice-client-node.git"
+	},
+	"homepage": "https://github.com/nature/pa11y-webservice-client-node",
+	"bugs": "https://github.com/nature/pa11y-webservice-client-node/issues",
+
+	"dependencies": {
+		"request": "~2.27"
+	},
+	"devDependencies": {
+		"jshint": "~2.1",
+		"mocha": "~1.12",
+		"proclaim": "~2.0"
+	},
+
+	"main": "./lib/client.js",
+	"scripts": {
+		"test": "make lint test"
+	}
+}
