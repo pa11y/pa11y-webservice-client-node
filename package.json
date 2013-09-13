@@ -22,7 +22,9 @@
 	"devDependencies": {
 		"jshint": "~2.1",
 		"mocha": "~1.12",
-		"proclaim": "~2.0"
+		"mockery": "~1.4",
+		"proclaim": "~2.0",
+		"sinon": "1.7"
 	},
 
 	"main": "./lib/client.js",
