@@ -101,14 +101,24 @@ describe('pa11y-webservice-client-node', function () {
 			describe('.get()', function () {
 
 				it('should get all tasks from the web-service', function (done) {
-					client.tasks.get(function (err) {
+					client.tasks.get({}, function (err) {
 						assert.isNull(err);
 						done();
 					});
 				});
 
+				it('should use the passed in query string if present', function (done) {
+					var query = {
+						lastres: true
+					};
+					client.tasks.get(query, function () {
+						assert.deepEqual(request.getCall(0).args[0].qs, query);
+						done();
+					});
+				});
+
 				it('should callback with the recieved tasks', function (done) {
-					client.tasks.get(function (err, tasks) {
+					client.tasks.get({}, function (err, tasks) {
 						assert.isArray(tasks);
 						done();
 					});
@@ -179,14 +189,24 @@ describe('pa11y-webservice-client-node', function () {
 				describe('.get()', function () {
 
 					it('should get the task from the web-service', function (done) {
-						client.task('task1').get(function (err) {
+						client.task('task1').get({}, function (err) {
 							assert.isNull(err);
 							done();
 						});
 					});
 
+					it('should use the passed in query string if present', function (done) {
+						var query = {
+							lastres: true
+						};
+						client.task('task1').get(query, function () {
+							assert.deepEqual(request.getCall(0).args[0].qs, query);
+							done();
+						});
+					});
+
 					it('should callback with the recieved task', function (done) {
-						client.task('task1').get(function (err, task) {
+						client.task('task1').get({}, function (err, task) {
 							assert.isObject(task);
 							assert.isDefined(task.id);
 							done();
@@ -194,7 +214,7 @@ describe('pa11y-webservice-client-node', function () {
 					});
 
 					it('should callback with an error if the task was not found', function (done) {
-						client.task('task2').get(function (err) {
+						client.task('task2').get({}, function (err) {
 							assert.isInstanceOf(err, Error);
 							assert.strictEqual(err.message, 'foo');
 							done();
