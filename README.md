@@ -38,7 +38,14 @@ client.tasks.create({
 });
 
 // Get all tasks
-client.tasks.get(function (err, tasks) {
+client.tasks.get({}, function (err, tasks) {
+    // tasks  =  array of objects representing tasks, or null if an error occurred
+});
+
+// Get all tasks with last results included for each
+client.tasks.get({
+    lastres: true
+}, function (err, tasks) {
     // tasks  =  array of objects representing tasks, or null if an error occurred
 });
 
@@ -63,7 +70,14 @@ client.tasks.results({
 });
 
 // Get a task by ID
-client.task('5231c687bbdf0f94fa000007').get(function (err, task) {
+client.task('5231c687bbdf0f94fa000007').get({}, function (err, task) {
+    // task  =  object representing the requested task, or null if an error occurred
+});
+
+// Get a task by ID with last results included
+client.task('5231c687bbdf0f94fa000007').get({
+    lastres: true
+}, function (err, task) {
     // task  =  object representing the requested task, or null if an error occurred
 });
 
