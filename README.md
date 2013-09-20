@@ -91,6 +91,18 @@ client.task('5231c687bbdf0f94fa000007').results({
 }, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
+
+// Get a result by ID
+client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (err, result) {
+    // task  =  object representing the requested result, or null if an error occurred
+});
+
+// Get a result by ID with full details
+client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
+    full: true
+}, function (err, result) {
+    // task  =  object representing the requested result, or null if an error occurred
+});
 ```
 
 

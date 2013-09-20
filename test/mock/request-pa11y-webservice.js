@@ -67,6 +67,10 @@ var mockEndpoints = {
 		return done(null, {statusCode: 200}, []);
 	},
 
+	'GET http://pa11y-ws/tasks/task1/results/result1': function (query, body, done) {
+		return done(null, {statusCode: 200}, mockResult);
+	}
+
 };
 
 var mockTask = {
@@ -74,4 +78,9 @@ var mockTask = {
 	url: 'nature.com',
 	standard: 'WCAG2AA',
 	ignore: []
+};
+
+var mockResult = {
+	id: 'result1',
+	task: 'task1'
 };

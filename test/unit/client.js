@@ -1,4 +1,5 @@
 /* global afterEach, beforeEach, describe, it */
+/* jshint maxlen: 200 */
 'use strict';
 
 var assert = require('proclaim');
@@ -186,6 +187,10 @@ describe('pa11y-webservice-client-node', function () {
 					assert.isFunction(client.task().results);
 				});
 
+				it('should have a result method', function () {
+					assert.isFunction(client.task().result);
+				});
+
 				describe('.get()', function () {
 
 					it('should get the task from the web-service', function (done) {
@@ -284,6 +289,59 @@ describe('pa11y-webservice-client-node', function () {
 							assert.strictEqual(err.message, 'foo');
 							done();
 						});
+					});
+
+				});
+
+				describe('.result()', function () {
+
+					it('should return an object', function () {
+						assert.isObject(client.task().result());
+					});
+
+					describe('[returned object]', function () {
+
+						it('should have a get method', function () {
+							assert.isFunction(client.task().get);
+						});
+
+						describe('.get()', function () {
+
+							it('should get the result from the web-service', function (done) {
+								client.task('task1').result('result1').get({}, function (err) {
+									assert.isNull(err);
+									done();
+								});
+							});
+
+							it('should use the passed in query string if present', function (done) {
+								var query = {
+									full: true
+								};
+								client.task('task1').result('result1').get(query, function () {
+									assert.deepEqual(request.getCall(0).args[0].qs, query);
+									done();
+								});
+							});
+
+							it('should callback with the recieved result', function (done) {
+								client.task('task1').result('result1').get({}, function (err, result) {
+									assert.isObject(result);
+									assert.isDefined(result.id);
+									done();
+								});
+							});
+
+							it('should callback with an error if the result was not found', function (done) {
+								client.task('task1').result('result2').get({}, function (err) {
+									assert.isInstanceOf(err, Error);
+									assert.strictEqual(err.message, 'foo');
+									done();
+								});
+							});
+
+						});
+
 					});
 
 				});
