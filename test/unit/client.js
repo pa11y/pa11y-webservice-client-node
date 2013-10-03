@@ -1,5 +1,5 @@
 /* global afterEach, beforeEach, describe, it */
-/* jshint maxlen: 200 */
+/* jshint maxlen: false, maxstatements: false */
 'use strict';
 
 var assert = require('proclaim');
@@ -183,6 +183,10 @@ describe('pa11y-webservice-client-node', function () {
 					assert.isFunction(client.task().remove);
 				});
 
+				it('should have a run method', function () {
+					assert.isFunction(client.task().run);
+				});
+
 				it('should have a results method', function () {
 					assert.isFunction(client.task().results);
 				});
@@ -241,6 +245,17 @@ describe('pa11y-webservice-client-node', function () {
 						client.task('task2').remove(function (err) {
 							assert.isInstanceOf(err, Error);
 							assert.strictEqual(err.message, 'foo');
+							done();
+						});
+					});
+
+				});
+
+				describe('.run()', function () {
+
+					it('should run the task in the web-service', function (done) {
+						client.task('task1').run(function (err) {
+							assert.isNull(err);
 							done();
 						});
 					});

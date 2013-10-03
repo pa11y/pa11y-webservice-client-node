@@ -86,6 +86,11 @@ client.task('5231c687bbdf0f94fa000007').remove(function (err) {
     // err  =  null if task was deleted, or an Error object if something went wrong
 });
 
+// Run a task by ID
+client.task('5231c687bbdf0f94fa000007').run(function (err) {
+    // err  =  null if task is running, or an Error object if something went wrong
+});
+
 // Get results for a task
 client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred

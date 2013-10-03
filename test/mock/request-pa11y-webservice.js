@@ -56,6 +56,10 @@ var mockEndpoints = {
 		return done(null, {statusCode: 204}, null);
 	},
 
+	'POST http://pa11y-ws/tasks/task1/run': function (query, body, done) {
+		return done(null, {statusCode: 202}, null);
+	},
+
 	'GET http://pa11y-ws/tasks/task1/results': function (query, body, done) {
 		if (query.foo) {
 			return done(null, {statusCode: 400}, {
