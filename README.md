@@ -14,7 +14,7 @@ Installing
 Install pa11y-webservice-client-node with npm:
 
 ```sh
-$ npm install -g pa11y-webservice-client-node
+$ npm install pa11y-webservice-client-node
 ```
 
 
@@ -128,11 +128,14 @@ client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
 Development
 -----------
 
-To develop pa11y-webservice-client-node, you'll need to clone the repo locally. Now you'll be able to run the following commands:
+To develop pa11y-webservice-client-node, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
+
+Now you'll be able to run the following commands:
 
 ```sh
-$ make lint  # Run JSHint with the correct config
-$ make test  # Run tests
+$ grunt       # Run the lint and test tasks together
+$ grunt lint  # Run JSHint with the correct config
+$ grunt test  # Run unit tests
 ```
 
 Code with lint errors or failing tests will not be accepted, please use the build tools outlined above.
@@ -149,5 +152,6 @@ pa11y-webservice is licensed under the [GNU General Public License 3.0][gpl].
 
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
+[grunt]: http://gruntjs.com/
 [pa11y-webservice]: https://github.com/nature/pa11y-webservice
 [wiki-web-service]: https://github.com/nature/pa11y-webservice/wiki/Web-Service-Endpoints

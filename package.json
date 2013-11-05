@@ -20,15 +20,16 @@
 		"request": "~2.27"
 	},
 	"devDependencies": {
-		"jshint": "~2.1",
-		"mocha": "~1.12",
+		"grunt": "~0.4",
+		"grunt-contrib-jshint": "~0.7",
+		"grunt-mocha-test": "~0.7",
 		"mockery": "~1.4",
 		"proclaim": "~2.0",
-		"sinon": "1.7"
+		"sinon": "~1.7"
 	},
 
 	"main": "./lib/client.js",
 	"scripts": {
-		"test": "make lint test"
+		"test": "grunt"
 	}
 }
