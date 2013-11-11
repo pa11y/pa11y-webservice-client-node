@@ -22,9 +22,10 @@ var mockEndpoints = {
 	},
 
 	'POST http://pa11y-ws/tasks': function (query, body, done) {
-		if (body.url && body.standard) {
+		if (body.name && body.url && body.standard) {
 			return done(null, {statusCode: 201}, {
 				id: 'task1',
+				name: body.name,
 				url: body.url,
 				standard: body.standard,
 				ignore: body.ignore || []
@@ -79,6 +80,7 @@ var mockEndpoints = {
 
 var mockTask = {
 	id: 'task1',
+	name: 'NPG Home',
 	url: 'nature.com',
 	standard: 'WCAG2AA',
 	ignore: []

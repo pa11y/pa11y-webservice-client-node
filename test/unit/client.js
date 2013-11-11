@@ -68,6 +68,7 @@ describe('pa11y-webservice-client-node', function () {
 
 				it('should create a task in the web-service', function (done) {
 					client.tasks.create({
+						name: 'NPG Home',
 						url: 'nature.com',
 						standard: 'WCAG2AA'
 					}, function (err) {
@@ -78,11 +79,13 @@ describe('pa11y-webservice-client-node', function () {
 
 				it('should callback with the new task', function (done) {
 					client.tasks.create({
+						name: 'NPG Home',
 						url: 'nature.com',
 						standard: 'WCAG2AA'
 					}, function (err, task) {
 						assert.isObject(task);
 						assert.isDefined(task.id);
+						assert.strictEqual(task.name, 'NPG Home');
 						assert.strictEqual(task.url, 'nature.com');
 						assert.strictEqual(task.standard, 'WCAG2AA');
 						done();
