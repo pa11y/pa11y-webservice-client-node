@@ -1,7 +1,6 @@
 {
 	"name": "pa11y-webservice-client-node",
-	"version": "1.0.0-beta.7",
-	"private": true,
+	"version": "1.0.0",
 
 	"description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
 	"keywords": [ "accessibility", "analysis", "client", "report", "web-service" ],
