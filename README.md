@@ -32,6 +32,7 @@ var client = createClient('http://localhost:3000/');
 
 // Create a task
 client.tasks.create({
+    name: 'Nature Home Page',
     url: 'nature.com',
     standard: 'WCAG2AA'
 }, function (err, task) {
@@ -80,6 +81,13 @@ client.task('5231c687bbdf0f94fa000007').get({
     lastres: true
 }, function (err, task) {
     // task  =  object representing the requested task, or null if an error occurred
+});
+
+// Edit a task by ID
+client.task('5231c687bbdf0f94fa000007').edit({
+    name: 'New name'
+}, function (err, task) {
+    // task  =  object representing the newly updated task, or null if an error occurred
 });
 
 // Delete a task by ID
