@@ -53,6 +53,10 @@ var mockEndpoints = {
 		return done(null, {statusCode: 200}, mockTask);
 	},
 
+	'PATCH http://pa11y-ws/tasks/task1': function (query, body, done) {
+		return done(null, {statusCode: 204}, mockTask);
+	},
+
 	'DELETE http://pa11y-ws/tasks/task1': function (query, body, done) {
 		return done(null, {statusCode: 204}, null);
 	},

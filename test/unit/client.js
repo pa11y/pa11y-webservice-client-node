@@ -182,6 +182,10 @@ describe('pa11y-webservice-client-node', function () {
 					assert.isFunction(client.task().get);
 				});
 
+				it('should have an edit method', function () {
+					assert.isFunction(client.task().edit);
+				});
+
 				it('should have a remove method', function () {
 					assert.isFunction(client.task().remove);
 				});
@@ -227,6 +231,26 @@ describe('pa11y-webservice-client-node', function () {
 
 					it('should callback with an error if the task was not found', function (done) {
 						client.task('task2').get({}, function (err) {
+							assert.isInstanceOf(err, Error);
+							assert.strictEqual(err.message, 'foo');
+							done();
+						});
+					});
+
+				});
+
+				describe('.edit()', function () {
+
+					it('should edit the task in the web-service', function (done) {
+						client.task('task1').edit({}, function (err, task) {
+							assert.isObject(task);
+							assert.isDefined(task.id);
+							done();
+						});
+					});
+
+					it('should callback with an error if the task was not found', function (done) {
+						client.task('task2').edit({}, function (err) {
 							assert.isInstanceOf(err, Error);
 							assert.strictEqual(err.message, 'foo');
 							done();
