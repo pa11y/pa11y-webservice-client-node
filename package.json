@@ -10,10 +10,10 @@
 
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nature/pa11y-webservice-client-node.git"
+		"url": "https://github.com/springernature/pa11y-webservice-client-node.git"
 	},
-	"homepage": "https://github.com/nature/pa11y-webservice-client-node",
-	"bugs": "https://github.com/nature/pa11y-webservice-client-node/issues",
+	"homepage": "https://github.com/springernature/pa11y-webservice-client-node",
+	"bugs": "https://github.com/springernature/pa11y-webservice-client-node/issues",
 
 	"dependencies": {
 		"request": "~2.27"

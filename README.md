@@ -155,14 +155,14 @@ For users with push-access, don't commit to the master branch. Code should be in
 License
 -------
 
-[Copyright 2013 Nature Publishing Group](LICENSE.txt).  
+[Copyright 2013 Springer Nature](LICENSE.txt).  
 pa11y-webservice is licensed under the [GNU General Public License 3.0][gpl].
 
 
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/
-[pa11y-webservice]: https://github.com/nature/pa11y-webservice
-[travis]: https://travis-ci.org/nature/pa11y-webservice-client-node
-[travis-img]: https://travis-ci.org/nature/pa11y-webservice-client-node.png?branch=master
-[wiki-web-service]: https://github.com/nature/pa11y-webservice/wiki/Web-Service-Endpoints
+[pa11y-webservice]: https://github.com/springernature/pa11y-webservice
+[travis]: https://travis-ci.org/springernature/pa11y-webservice-client-node
+[travis-img]: https://travis-ci.org/springernature/pa11y-webservice-client-node.png?branch=master
+[wiki-web-service]: https://github.com/springernature/pa11y-webservice/wiki/Web-Service-Endpoints
