@@ -162,7 +162,7 @@ pa11y-webservice is licensed under the [GNU General Public License 3.0][gpl].
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/
-[pa11y-webservice]: https://github.com/springernature/pa11y-webservice
-[travis]: https://travis-ci.org/springernature/pa11y-webservice-client-node
-[travis-img]: https://travis-ci.org/springernature/pa11y-webservice-client-node.png?branch=master
-[wiki-web-service]: https://github.com/springernature/pa11y-webservice/wiki/Web-Service-Endpoints
+[pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
+[travis]: https://travis-ci.org/pa11y/pa11y-webservice-client-node
+[travis-img]: https://travis-ci.org/pa11y/pa11y-webservice-client-node.png?branch=master
+[wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
