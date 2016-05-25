@@ -16,7 +16,7 @@
 	"bugs": "https://github.com/pa11y/pa11y-webservice-client-node/issues",
 
 	"dependencies": {
-		"request": "~2.27"
+		"request": "~2.72"
 	},
 	"devDependencies": {
 		"grunt": "~0.4",
