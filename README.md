@@ -6,7 +6,7 @@ pa11y-webservice-client-node is a Node.js client library for [pa11y-webservice][
 
 **Current Version:** *1.1.2*  
 **Build Status:** [![Build Status][travis-img]][travis]  
-**Node Version Support:** *0.10*
+**Node Version Support:** *0.10–6*
 
 
 Installing
