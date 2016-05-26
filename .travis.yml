@@ -1,16 +1,20 @@
 
 # Language/versions
 language: node_js
-node_js:
-  - "0.10"
+matrix:
+  include:
+    - node_js: '0.10'
+    - node_js: '0.12'
+    - node_js: '4'
+    - node_js: '5'
+    - node_js: '6'
+
+# Build only master (and pull-requests)
+branches:
+  only:
+    - master
 
 # Build script
 before_script:
   - npm install -g grunt-cli
 script: 'grunt ci'
-
-# Notifications
-notifications:
- email:
-   - j.robinson@nature.com
-   - rowan.manning@nature.com
