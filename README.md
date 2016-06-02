@@ -1,8 +1,8 @@
 
-pa11y-webservice-client-node
-============================
+Pa11y Webservice Node.js Client
+===============================
 
-pa11y-webservice-client-node is a Node.js client library for [pa11y-webservice][pa11y-webservice].
+This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
 **Current Version:** *1.2.0*  
 **Build Status:** [![Build Status][travis-img]][travis]  
@@ -12,7 +12,7 @@ pa11y-webservice-client-node is a Node.js client library for [pa11y-webservice][
 Installing
 ----------
 
-Install pa11y-webservice-client-node with npm:
+Install Pa11y Webservice Node.js Client with npm:
 
 ```sh
 $ npm install pa11y-webservice-client-node
@@ -22,7 +22,7 @@ $ npm install pa11y-webservice-client-node
 Usage
 -----
 
-For more information on the actual web-service endpoints and resource types, [read the documentation][wiki-web-service].
+For more information on the actual webservice endpoints and resource types, [read the documentation][wiki-web-service].
 
 ```js
 var createClient = require('pa11y-webservice-client-node');
@@ -137,7 +137,7 @@ client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
 Development
 -----------
 
-To develop pa11y-webservice-client-node, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
+To develop Pa11y Webservice Node.js Client, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
 
 Now you'll be able to run the following commands:
 
@@ -156,13 +156,13 @@ License
 -------
 
 [Copyright 2013 Springer Nature](LICENSE.txt).  
-pa11y-webservice is licensed under the [GNU General Public License 3.0][gpl].
+Pa11y Webservice Node.js Client is licensed under the [GNU General Public License 3.0][gpl].
 
 
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/
-[pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
-[travis]: https://travis-ci.org/pa11y/pa11y-webservice-client-node
-[travis-img]: https://travis-ci.org/pa11y/pa11y-webservice-client-node.png?branch=master
-[wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
+[pa11y-webservice]: https://github.com/pa11y/webservice
+[travis]: https://travis-ci.org/pa11y/webservice-client-node
+[travis-img]: https://travis-ci.org/pa11y/webservice-client-node.png?branch=master
+[wiki-web-service]: https://github.com/pa11y/webservice/wiki/Web-Service-Endpoints
