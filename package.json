@@ -20,7 +20,7 @@
 	"bugs": "https://github.com/pa11y/webservice-client-node/issues",
 
 	"dependencies": {
-		"request": "~2.72"
+		"request": "~2.74"
 	},
 	"devDependencies": {
 		"grunt": "~0.4",
