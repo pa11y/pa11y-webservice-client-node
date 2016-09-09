@@ -18,6 +18,7 @@
 	},
 	"homepage": "https://github.com/pa11y/webservice-client-node",
 	"bugs": "https://github.com/pa11y/webservice-client-node/issues",
+	"license": "GPL-3.0",
 
 	"dependencies": {
 		"request": "~2.74"
