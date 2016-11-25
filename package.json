@@ -1,39 +1,40 @@
 {
-	"name": "pa11y-webservice-client-node",
-	"version": "1.2.1",
-
-	"engines": {
-		"node": ">=0.10"
-	},
-
-	"description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
-	"keywords": [ "accessibility", "analysis", "client", "report", "web-service" ],
-	"contributors": [
-		"Rowan Manning (http://rowanmanning.com/)"
-	],
-
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/pa11y/webservice-client-node.git"
-	},
-	"homepage": "https://github.com/pa11y/webservice-client-node",
-	"bugs": "https://github.com/pa11y/webservice-client-node/issues",
-	"license": "GPL-3.0",
-
-	"dependencies": {
-		"request": "~2.74"
-	},
-	"devDependencies": {
-		"grunt": "~0.4",
-		"grunt-contrib-jshint": "~0.7",
-		"grunt-mocha-test": "~0.7",
-		"mockery": "~1.4",
-		"proclaim": "~2.0",
-		"sinon": "~1.7"
-	},
-
-	"main": "./lib/client.js",
-	"scripts": {
-		"test": "grunt"
-	}
+  "name": "pa11y-webservice-client-node",
+  "version": "1.2.1",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
+  "keywords": [
+    "accessibility",
+    "analysis",
+    "client",
+    "report",
+    "web-service"
+  ],
+  "contributors": [
+    "Rowan Manning (http://rowanmanning.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pa11y/webservice-client-node.git"
+  },
+  "homepage": "https://github.com/pa11y/webservice-client-node",
+  "bugs": "https://github.com/pa11y/webservice-client-node/issues",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "request": "~2.74"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-jshint": "~0.7",
+    "grunt-mocha-test": "~0.7",
+    "mockery": "~1.4",
+    "proclaim": "~2.0",
+    "sinon": "~1.7"
+  },
+  "main": "./lib/client.js",
+  "scripts": {
+    "test": "grunt"
+  }
 }
