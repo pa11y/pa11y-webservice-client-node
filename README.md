@@ -134,10 +134,12 @@ client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
 ```
 
 
-Development
------------
+Contributing
+------------
 
-To develop Pa11y Webservice Node.js Client, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
+There are many ways to contribute to Pa11y Webservice Node.js Client, we cover these in the [contributing guide](CONTRIBUTING.md) for this repo.
+
+If you're ready to contribute some code, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
 
 Now you'll be able to run the following commands:
 
