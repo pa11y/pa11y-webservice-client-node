@@ -157,8 +157,8 @@ For users with push-access, don't commit to the master branch. Code should be in
 License
 -------
 
-[Copyright 2013 Springer Nature](LICENSE.txt).  
-Pa11y Webservice Node.js Client is licensed under the [GNU General Public License 3.0][gpl].
+Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
+Copyright &copy; 2013–2017, Team Pa11y
 
 
 
