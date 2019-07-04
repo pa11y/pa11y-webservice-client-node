@@ -6,7 +6,7 @@ This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
 **Current Version:** *1.2.1*  
 **Build Status:** [![Build Status][travis-img]][travis]  
-**Node Version Support:** *0.10–6*
+**Node Version Support:** *8+*
 
 
 Installing
@@ -158,9 +158,7 @@ License
 -------
 
 Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
-Copyright &copy; 2013–2017, Team Pa11y
-
-
+Copyright &copy; 2013–2019, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/

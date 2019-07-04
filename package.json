@@ -2,7 +2,7 @@
   "name": "pa11y-webservice-client-node",
   "version": "1.2.1",
   "engines": {
-    "node": ">=0.10"
+    "node": ">=8"
   },
   "description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
   "keywords": [
@@ -24,12 +24,13 @@
   "bugs": "https://github.com/pa11y/webservice-client-node/issues",
   "license": "GPL-3.0",
   "dependencies": {
-    "request": "~2.74"
+    "request": "~2.88"
   },
   "devDependencies": {
-    "grunt": "~0.4",
-    "grunt-contrib-jshint": "~0.7",
-    "grunt-mocha-test": "~0.7",
+    "grunt": "~1.0.4",
+    "grunt-contrib-jshint": "~2.1.0",
+    "grunt-mocha-test": "~0.13.3",
+    "mocha": "~6.1.4",
     "mockery": "~1.4",
     "proclaim": "~2.0",
     "sinon": "~1.7"
