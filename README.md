@@ -4,10 +4,9 @@ Pa11y Webservice Node.js Client
 
 This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
-**Current Version:** *1.2.1*  
+**Current Version:** *2.0.0*  
 **Build Status:** [![Build Status][travis-img]][travis]  
 **Node Version Support:** *8+*
-
 
 Installing
 ----------
@@ -17,7 +16,6 @@ Install Pa11y Webservice Node.js Client with npm:
 ```sh
 $ npm install pa11y-webservice-client-node
 ```
-
 
 Usage
 -----
@@ -153,6 +151,19 @@ Code with lint errors or failing tests will not be accepted, please use the buil
 
 For users with push-access, don't commit to the master branch. Code should be in `develop` until it's ready to be released.
 
+Support and Migration
+---------------------
+
+Major versions are normally supported for 6 months after their last minor release. This means that patch-level changes will be added and bugs will be fixed. The table below outlines the end-of-support dates for major versions, and the last minor release for that version.
+
+We also maintain a [migration guide](MIGRATION.md) to help you migrate.
+
+| :grey_question: | Major Version | Last Release | Node.js Versions | Support End Date |
+| :-------------- | :------------ | :----------- | :--------------- | :--------------- |
+| :heart:         | 2             | N/A          | 8+               | N/A              |
+| :hourglass:     | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
+
+If you're opening issues related to these, please mention the version that the issue relates to.
 
 License
 -------
