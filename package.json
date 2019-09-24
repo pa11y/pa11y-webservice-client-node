@@ -40,6 +40,6 @@
     "test": "grunt"
   },
   "files": [
-    "/lib"
+    "lib"
   ]
 }
