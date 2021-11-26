@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 				es3: false,
 				indent: 4,
 				latedef: false,
-				maxcomplexity: 4,
+				maxcomplexity: 5,
 				maxdepth: 2,
 				maxlen: 100,
 				maxparams: 5,

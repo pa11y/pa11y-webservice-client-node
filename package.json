@@ -24,16 +24,16 @@
   "bugs": "https://github.com/pa11y/webservice-client-node/issues",
   "license": "GPL-3.0",
   "dependencies": {
-    "request": "~2.88"
+    "request": "~2.88.2"
   },
   "devDependencies": {
-    "grunt": "~1.0.4",
-    "grunt-contrib-jshint": "~2.1.0",
+    "grunt": "~1.4.1",
+    "grunt-contrib-jshint": "~3.1.1",
     "grunt-mocha-test": "~0.13.3",
-    "mocha": "~6.1.4",
-    "mockery": "~1.4",
-    "proclaim": "~2.0",
-    "sinon": "~1.7"
+    "mocha": "~8.4.0",
+    "mockery": "~1.4.0",
+    "proclaim": "~3.6.0",
+    "sinon": "~1.7.0"
   },
   "main": "./lib/client.js",
   "scripts": {
