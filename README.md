@@ -12,7 +12,7 @@ This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 Install Pa11y Webservice Node.js Client with npm:
 
 ```sh
-$ npm install pa11y-webservice-client-node
+npm install pa11y-webservice-client-node
 ```
 
 ## Usage
@@ -137,9 +137,9 @@ If you're ready to contribute some code, you'll need to clone the repo locally a
 Now you'll be able to run the following commands:
 
 ```sh
-$ grunt       # Run the lint and test tasks together
-$ grunt lint  # Run JSHint with the correct config
-$ grunt test  # Run unit tests
+grunt       # Run the lint and test tasks together
+grunt lint  # Run JSHint with the correct config
+grunt test  # Run unit tests
 ```
 
 Code with lint errors or failing tests will not be accepted, please use the build tools outlined above.
