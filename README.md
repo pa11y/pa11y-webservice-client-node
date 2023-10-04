@@ -163,7 +163,7 @@ If you're opening issues related to these, please mention the version that the i
 ## License
 
 Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
-Copyright &copy; 2013–2019, Team Pa11y
+Copyright &copy; 2013–2023, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/
