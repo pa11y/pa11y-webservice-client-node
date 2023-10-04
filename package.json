@@ -16,10 +16,7 @@
   "contributors": [
     "Rowan Manning (http://rowanmanning.com/)"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pa11y/pa11y-webservice-client-node.git"
-  },
+  "repository": "github:pa11y/pa11y-webservice-client-node",
   "homepage": "https://github.com/pa11y/pa11y-webservice-client-node",
   "bugs": "https://github.com/pa11y/pa11y-webservice-client-node/issues",
   "license": "GPL-3.0",
