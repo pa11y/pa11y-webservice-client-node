@@ -33,7 +33,7 @@
     "mocha": "~8.4.0",
     "mockery": "~1.4.0",
     "proclaim": "~3.6.0",
-    "sinon": "~1.7.0"
+    "sinon": "~16.0.0"
   },
   "main": "./lib/client.js",
   "scripts": {
