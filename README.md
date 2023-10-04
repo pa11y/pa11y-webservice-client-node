@@ -20,10 +20,10 @@ npm install pa11y-webservice-client-node
 For more information on the actual webservice endpoints and resource types, [read the documentation][wiki-web-service].
 
 ```js
-var createClient = require('pa11y-webservice-client-node');
+const createClient = require('pa11y-webservice-client-node');
 
 // Create client with the base URL of the web-service
-var client = createClient('http://localhost:3000/');
+const client = createClient('http://localhost:3000/');
 
 // Create a task
 client.tasks.create({
