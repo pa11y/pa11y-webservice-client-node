@@ -50,6 +50,4 @@ module.exports = function (grunt) {
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('test', ['mochaTest']);
 	grunt.registerTask('default', ['lint', 'test']);
-	grunt.registerTask('ci', ['lint', 'test']);
-
 };
