@@ -53,8 +53,8 @@ client.tasks.results({}, function (err, results) {
 
 // Get results for all tasks within a date range
 client.tasks.results({
-    from: '2013-01-01',
-    to: '2013-01-31'
+    from: '2023-01-01',
+    to: '2023-01-31'
 }, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
@@ -102,8 +102,8 @@ client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
 
 // Get results for a task within a date range
 client.task('5231c687bbdf0f94fa000007').results({
-    from: '2013-01-01',
-    to: '2013-01-31'
+    from: '2023-01-01',
+    to: '2023-01-31'
 }, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
