@@ -135,13 +135,19 @@ There are many ways to contribute to Pa11y Webservice Node.js Client; we cover t
 If you'd like to contribute code, get started by cloning the repo and running `npm install`. Now you'll be able to run the following commands. Please use these build tools to avoid your contribution being delayed by a lint error or a failing test:
 
 ```sh
-grunt       # Run the lint and test tasks together
-grunt lint  # Run JSHint with the correct config
-grunt test  # Run unit tests
+# Lint your contribution
+grunt lint
 ```
 
+```sh
+# Test your contribution
+grunt test
+```
 
-For users with push-access, don't commit to the master branch. Code should be in `develop` until it's ready to be released.
+```sh
+# Lint and test with a single command
+grunt
+```
 
 ## Support and Migration
 
