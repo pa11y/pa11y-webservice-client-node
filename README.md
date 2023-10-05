@@ -155,14 +155,14 @@ We maintain a [migration guide](MIGRATION.md) to help you migrate between major 
 
 A previous major version of this client will be supported for a minimum of 6 months from its final minor release. During this time bugs will continue to be fixed and released in the form of patch versions. If you're opening an issue related to this project, please mention the specific version that the issue affects.
 
-The following table lists the major versions available and, for each previous major version, its end-of-support date and its final minor version released.
+The following table lists the major versions available and, for each previous major version, its end-of-support date, and its final minor version released.
 
-| :grey_question: | Major Version | Last Release | Node.js Required | Support Ends     |
-| :-------------- | :------------ | :----------- | :--------------- | :--------------- |
-| :heart:         | 4             | 4.0.0        | 14+              | Current major version |
-| :hourglass:     | 3             | 3.0.0        | 12+              | 2023-11-01       |
-| :skull:         | 2             | 2.0.0        | 8+               | 2022-05-26       |
-| :skull:         | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
+| Major version | Last release | Node.js required | End of support                           |
+| :------------ | :----------- | :--------------- | :--------------------------------------- |
+| 4             | 4.0.0        | 14+              | :white_check_mark: Current major version |
+| 3             | 3.0.0        | 12+              | 2023-11-01                               |
+| 2             | 2.0.0        | 8+               | 2022-05-26                               |
+| 1             | 1.2.1        | 0.10+            | 2020-01-05                               |
 
 ## License
 
