@@ -159,8 +159,9 @@ The following table lists the major versions available and, for each previous ma
 
 | :grey_question: | Major Version | Last Release | Node.js Required | Support Ends     |
 | :-------------- | :------------ | :----------- | :--------------- | :--------------- |
-| :heart:         | 3             | N/A          | 12+              | N/A              |
-| :hourglass:     | 2             | 2.0.0        | 8+               | 2022-05-26       |
+| :heart:         | 4             | 4.0.0        | 14+              | Current major version |
+| :hourglass:     | 3             | 3.0.0        | 12+              | 2023-11-01       |
+| :skull:         | 2             | 2.0.0        | 8+               | 2022-05-26       |
 | :skull:         | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
 
 ## License
