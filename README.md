@@ -9,20 +9,20 @@ This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
 ## Installing
 
-Install Pa11y Webservice Node.js Client with npm:
+Add this client to your project with your preferred package manager. For example, to install it as a development dependency with npm:
 
 ```sh
-npm install pa11y-webservice-client-node
+npm install --save-dev pa11y-webservice-client-node
 ```
 
 ## Usage
 
-For more information on the actual webservice endpoints and resource types, [read the documentation][wiki-web-service].
+For information about Pa11y Webservice's endpoints and resource types, [read the documentation][wiki-web-service].
 
 ```js
 const createClient = require('pa11y-webservice-client-node');
 
-// Create client with the base URL of the web-service
+// Create client with the base URL of your instance of Pa11y Webservice
 const client = createClient('http://localhost:3000/');
 
 // Create a task
@@ -130,9 +130,9 @@ client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
 
 ## Contributing
 
-There are many ways to contribute to Pa11y Webservice Node.js Client, we cover these in the [contributing guide](CONTRIBUTING.md) for this repo.
+There are many ways to contribute to Pa11y Webservice Node.js Client; we cover these in this repo's [contributing guide](CONTRIBUTING.md).
 
-If you're ready to contribute some code, you'll need to clone the repo locally and run `npm install`. Now you'll be able to run the following commands:
+If you'd like to contribute code, get started by cloning the repo and running `npm install`. Now you'll be able to run the following commands. Please use these build tools to avoid your contribution being delayed by a lint error or a failing test:
 
 ```sh
 grunt       # Run the lint and test tasks together
@@ -140,7 +140,6 @@ grunt lint  # Run JSHint with the correct config
 grunt test  # Run unit tests
 ```
 
-Code with lint errors or failing tests will not be accepted, please use the build tools outlined above.
 
 For users with push-access, don't commit to the master branch. Code should be in `develop` until it's ready to be released.
 
