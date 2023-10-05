@@ -15,10 +15,11 @@
 
 /* global afterEach, beforeEach, describe, it */
 /* jshint maxlen: false, maxstatements: false */
+
 'use strict';
 
-var assert = require('proclaim');
-var mockery = require('mockery');
+const assert = require('proclaim');
+const mockery = require('mockery');
 
 describe('pa11y-webservice-client-node', function () {
 	var pwcn, request;

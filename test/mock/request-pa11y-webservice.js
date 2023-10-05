@@ -15,7 +15,7 @@
 
 'use strict';
 
-var sinon = require('sinon');
+const sinon = require('sinon');
 
 module.exports = sinon.spy(function (opts, done) {
 	var endpoint = opts.method + ' ' + opts.url;
@@ -30,7 +30,7 @@ module.exports = sinon.spy(function (opts, done) {
 	}
 });
 
-var mockEndpoints = {
+const mockEndpoints = {
 
 	'GET http://pa11y-ws/tasks': function (query, body, done) {
 		return done(null, {statusCode: 200}, []);
@@ -97,7 +97,7 @@ var mockEndpoints = {
 
 };
 
-var mockTask = {
+const mockTask = {
 	id: 'task1',
 	name: 'NPG Home',
 	url: 'nature.com',
@@ -105,7 +105,7 @@ var mockTask = {
 	ignore: []
 };
 
-var mockResult = {
+const mockResult = {
 	id: 'result1',
 	task: 'task1'
 };
