@@ -173,11 +173,11 @@ Copyright &copy; 2013–2023, Team Pa11y
 [grunt]: http://gruntjs.com/
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
-[info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/build-and-test.yml
+[info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/pa11y-webservice-client-node
-[shield-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/build-and-test.yml/badge.svg
+[shield-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml/badge.svg
 [shield-license]: https://img.shields.io/badge/license-LGPL%203.0-blue.svg
 [shield-node]: https://img.shields.io/node/v/pa11y-webservice-client-node.svg
 [shield-npm]: https://img.shields.io/npm/v/pa11y-webservice-client-node.svg
