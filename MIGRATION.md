@@ -4,12 +4,13 @@ This package's API and/or supported set of environments changes between major ve
 
 ## Migrating to 4 from 3
 
-Versions 4.x of this client require Node.js version 14 or above.
+1. Upgrade to Node.js 14 or above.
+1. Upgrade npm to version 8 or above, or to a version of your preferred package manager that is interchangeable with such a version of npm.
 
 ## Migrating to 3 from 2
 
-Versions 3.x of this client require Node.js version 12 or above.
+1. Upgrade to Node.js 12 or above. 
 
 ## Migrating to 2 from 1
 
-Versions 2.x of this client require Node.js version 8 or above.
+1. Upgrade to Node.js 8 or above.
