@@ -4,8 +4,7 @@ This package's API and/or supported set of environments changes between major ve
 
 ## Migrating to 4 from 3
 
-1. Upgrade to Node.js 14 or above.
-1. Upgrade npm to version 8 or above, or to a version of your preferred package manager that is interchangeable with such a version of npm.
+1. Upgrade to Node.js 18 or above.
 
 ## Migrating to 3 from 2
 

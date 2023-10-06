@@ -2,7 +2,7 @@
 
 This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
-[![NPM version][shield-npm]][info-npm]
+[![Latest version published to npm][shield-npm]][info-npm]
 [![Node.js version support][shield-node]][info-node]
 [![Build status][shield-build]][info-build]
 [![LGPL-3.0 licensed][shield-license]][info-license]
@@ -159,7 +159,7 @@ The following table lists the major versions available and, for each previous ma
 
 | Major version | Last release | Node.js required | End of support                           |
 | :------------ | :----------- | :--------------- | :--------------------------------------- |
-| 4             | 4.0.0        | 14+              | :white_check_mark: Current major version |
+| 4             | 4.0.0        | 18+              | :white_check_mark: Current major version |
 | 3             | 3.0.0        | 12+              | 2023-11-01                               |
 | 2             | 2.0.0        | 8+               | 2022-05-26                               |
 | 1             | 1.2.1        | 0.10+            | 2020-01-05                               |

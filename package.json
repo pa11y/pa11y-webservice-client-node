@@ -2,7 +2,7 @@
   "name": "pa11y-webservice-client-node",
   "version": "3.0.0",
   "engines": {
-    "node": ">=14",
+    "node": ">=18",
     "npm": ">=8"
   },
   "description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
