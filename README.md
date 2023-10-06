@@ -151,18 +151,17 @@ grunt
 
 ## Support and Migration
 
-We maintain a [migration guide](MIGRATION.md) to help you migrate between major versions.
+Major versions are normally supported for 6 months after their last minor release. This means that patch-level changes will be added and bugs will be fixed. The table below outlines the end-of-support dates for major versions, and the last minor release for that version.
 
-A previous major version of this client will be supported for a minimum of 6 months from its final minor release. During this time bugs will continue to be fixed and released in the form of patch versions. If you're opening an issue related to this project, please mention the specific version that the issue affects.
+We also maintain a [migration guide](MIGRATION.md) to help you migrate.
 
-The following table lists the major versions available and, for each previous major version, its end-of-support date, and its final minor version released.
+| :grey_question: | Major Version | Last Release | Node.js Versions | Support End Date |
+| :-------------- | :------------ | :----------- | :--------------- | :--------------- |
+| :heart:         | 3             | N/A          | 12+              | N/A              |
+| :hourglass:     | 2             | 2.0.0        | 8+               | 2022-05-26       |
+| :skull:         | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
 
-| Major version | Last release | Node.js required | End of support                           |
-| :------------ | :----------- | :--------------- | :--------------------------------------- |
-| 4             | 4.0.0        | 18+              | :white_check_mark: Current major version |
-| 3             | 3.0.0        | 12+              | 2023-11-01                               |
-| 2             | 2.0.0        | 8+               | 2022-05-26                               |
-| 1             | 1.2.1        | 0.10+            | 2020-01-05                               |
+If you're opening issues related to these, please mention the version that the issue relates to.
 
 ## License
 
