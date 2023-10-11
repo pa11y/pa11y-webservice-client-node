@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 		jshint: {
 			all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
 			options: {
-				es3: false,
+				esversion: 6,
 				indent: 4,
 				latedef: false,
 				maxcomplexity: 5,
@@ -50,6 +50,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('test', ['mochaTest']);
 	grunt.registerTask('default', ['lint', 'test']);
-	grunt.registerTask('ci', ['lint', 'test']);
 
 };

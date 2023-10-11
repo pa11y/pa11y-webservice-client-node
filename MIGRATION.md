@@ -1,11 +1,15 @@
 # Migration Guide
 
-Pa11y's API changes between major versions. This is a guide to help you make the switch when this happens.
+This package's API and/or supported set of environments changes between major versions. This is a guide to help you update your project to use a new major version.
 
-## Migrating from 2.x to 3.x
+## Migrating to 4 from 3
 
-Pa11y Webservice Client 3.x only supports Node.js v12 and higher, you'll need to upgrade to be able to use it.
+1. Upgrade to Node.js 18 or above.
 
-## Migrating from 1.x to 2.x
+## Migrating to 3 from 2
 
-Pa11y Webservice Client 2.x only supports Node.js v8.0.0 and higher, you'll need to upgrade to be able to use it.
+1. Upgrade to Node.js 12 or above. 
+
+## Migrating to 2 from 1
+
+1. Upgrade to Node.js 8 or above.

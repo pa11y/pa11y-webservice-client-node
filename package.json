@@ -2,7 +2,8 @@
   "name": "pa11y-webservice-client-node",
   "version": "3.0.0",
   "engines": {
-    "node": ">=12"
+    "node": ">=18",
+    "npm": ">=8"
   },
   "description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
   "keywords": [
@@ -16,24 +17,21 @@
   "contributors": [
     "Rowan Manning (http://rowanmanning.com/)"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pa11y/webservice-client-node.git"
-  },
-  "homepage": "https://github.com/pa11y/webservice-client-node",
-  "bugs": "https://github.com/pa11y/webservice-client-node/issues",
+  "repository": "github:pa11y/pa11y-webservice-client-node",
+  "homepage": "https://github.com/pa11y/pa11y-webservice-client-node",
+  "bugs": "https://github.com/pa11y/pa11y-webservice-client-node/issues",
   "license": "GPL-3.0",
   "dependencies": {
     "request": "~2.88.2"
   },
   "devDependencies": {
-    "grunt": "~1.4.1",
-    "grunt-contrib-jshint": "~3.1.1",
+    "grunt": "~1.6.1",
+    "grunt-contrib-jshint": "~3.2.0",
     "grunt-mocha-test": "~0.13.3",
-    "mocha": "~8.4.0",
-    "mockery": "~1.4.0",
+    "mocha": "~10.2.0",
+    "mockery": "~2.1.0",
     "proclaim": "~3.6.0",
-    "sinon": "~1.7.0"
+    "sinon": "~16.0.0"
   },
   "main": "./lib/client.js",
   "scripts": {

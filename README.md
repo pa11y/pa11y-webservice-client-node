@@ -2,28 +2,28 @@
 
 This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
-[![NPM version][shield-npm]][info-npm]
+[![Latest version published to npm][shield-npm]][info-npm]
 [![Node.js version support][shield-node]][info-node]
 [![Build status][shield-build]][info-build]
 [![LGPL-3.0 licensed][shield-license]][info-license]
 
 ## Installing
 
-Install Pa11y Webservice Node.js Client with npm:
+Add this client to your project with your preferred package manager. For example, to install it as a development dependency with npm:
 
 ```sh
-$ npm install pa11y-webservice-client-node
+npm install --save-dev pa11y-webservice-client-node
 ```
 
 ## Usage
 
-For more information on the actual webservice endpoints and resource types, [read the documentation][wiki-web-service].
+For information about Pa11y Webservice's endpoints and resource types, [read the documentation][wiki-web-service].
 
 ```js
-var createClient = require('pa11y-webservice-client-node');
+const createClient = require('pa11y-webservice-client-node');
 
-// Create client with the base URL of the web-service
-var client = createClient('http://localhost:3000/');
+// Create client with the base URL of your instance of Pa11y Webservice
+const client = createClient('http://localhost:3000/');
 
 // Create a task
 client.tasks.create({
@@ -53,8 +53,8 @@ client.tasks.results({}, function (err, results) {
 
 // Get results for all tasks within a date range
 client.tasks.results({
-    from: '2013-01-01',
-    to: '2013-01-31'
+    from: '2023-01-01',
+    to: '2023-01-31'
 }, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
@@ -102,8 +102,8 @@ client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
 
 // Get results for a task within a date range
 client.task('5231c687bbdf0f94fa000007').results({
-    from: '2013-01-01',
-    to: '2013-01-31'
+    from: '2023-01-01',
+    to: '2023-01-31'
 }, function (err, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
@@ -130,21 +130,24 @@ client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
 
 ## Contributing
 
-There are many ways to contribute to Pa11y Webservice Node.js Client, we cover these in the [contributing guide](CONTRIBUTING.md) for this repo.
+There are many ways to contribute to Pa11y Webservice Node.js Client; we cover these in this repo's [contributing guide](CONTRIBUTING.md).
 
-If you're ready to contribute some code, you'll need to clone the repo locally and run `npm install`. You'll also need [Grunt][grunt] to be installed globally in order to run tests, you can do this with `npm install -g grunt-cli`.
-
-Now you'll be able to run the following commands:
+If you'd like to contribute code, get started by cloning the repo and running `npm install`. Now you'll be able to run the following commands. Please use these build tools to avoid your contribution being delayed by a lint error or a failing test:
 
 ```sh
-$ grunt       # Run the lint and test tasks together
-$ grunt lint  # Run JSHint with the correct config
-$ grunt test  # Run unit tests
+# Lint your contribution
+grunt lint
 ```
 
-Code with lint errors or failing tests will not be accepted, please use the build tools outlined above.
+```sh
+# Test your contribution
+grunt test
+```
 
-For users with push-access, don't commit to the master branch. Code should be in `develop` until it's ready to be released.
+```sh
+# Lint and test with a single command
+grunt
+```
 
 ## Support and Migration
 
@@ -163,17 +166,17 @@ If you're opening issues related to these, please mention the version that the i
 ## License
 
 Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
-Copyright &copy; 2013–2019, Team Pa11y
+Copyright &copy; 2013–2023, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [grunt]: http://gruntjs.com/
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
-[info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/build-and-test.yml
+[info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/pa11y-webservice-client-node
-[shield-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/build-and-test.yml/badge.svg
+[shield-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml/badge.svg
 [shield-license]: https://img.shields.io/badge/license-LGPL%203.0-blue.svg
 [shield-node]: https://img.shields.io/node/v/pa11y-webservice-client-node.svg
 [shield-npm]: https://img.shields.io/npm/v/pa11y-webservice-client-node.svg
