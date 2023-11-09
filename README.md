@@ -30,24 +30,24 @@ client.tasks.create({
     name: 'Nature Home Page',
     url: 'nature.com',
     standard: 'WCAG2AA'
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the new task, or null if an error occurred
 });
 
 // Get all tasks
-client.tasks.get({}, function (err, tasks) {
+client.tasks.get({}, function (error, tasks) {
     // tasks  =  array of objects representing tasks, or null if an error occurred
 });
 
 // Get all tasks with last results included for each
 client.tasks.get({
     lastres: true
-}, function (err, tasks) {
+}, function (error, tasks) {
     // tasks  =  array of objects representing tasks, or null if an error occurred
 });
 
 // Get results for all tasks
-client.tasks.results({}, function (err, results) {
+client.tasks.results({}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
@@ -55,48 +55,48 @@ client.tasks.results({}, function (err, results) {
 client.tasks.results({
     from: '2023-01-01',
     to: '2023-01-31'
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get results for all tasks with full details
 client.tasks.results({
     full: true
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get a task by ID
-client.task('5231c687bbdf0f94fa000007').get({}, function (err, task) {
+client.task('5231c687bbdf0f94fa000007').get({}, function (error, task) {
     // task  =  object representing the requested task, or null if an error occurred
 });
 
 // Get a task by ID with last results included
 client.task('5231c687bbdf0f94fa000007').get({
     lastres: true
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the requested task, or null if an error occurred
 });
 
 // Edit a task by ID
 client.task('5231c687bbdf0f94fa000007').edit({
     name: 'New name'
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the newly updated task, or null if an error occurred
 });
 
 // Delete a task by ID
-client.task('5231c687bbdf0f94fa000007').remove(function (err) {
+client.task('5231c687bbdf0f94fa000007').remove(function (error) {
     // err  =  null if task was deleted, or an Error object if something went wrong
 });
 
 // Run a task by ID
-client.task('5231c687bbdf0f94fa000007').run(function (err) {
+client.task('5231c687bbdf0f94fa000007').run(function (error) {
     // err  =  null if task is running, or an Error object if something went wrong
 });
 
 // Get results for a task
-client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
+client.task('5231c687bbdf0f94fa000007').results({}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
@@ -104,26 +104,26 @@ client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
 client.task('5231c687bbdf0f94fa000007').results({
     from: '2023-01-01',
     to: '2023-01-31'
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get results for a task with full details
 client.task('5231c687bbdf0f94fa000007').results({
     full: true
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get a result by ID
-client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (err, result) {
+client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (error, result) {
     // task  =  object representing the requested result, or null if an error occurred
 });
 
 // Get a result by ID with full details
 client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
     full: true
-}, function (err, result) {
+}, function (error, result) {
     // task  =  object representing the requested result, or null if an error occurred
 });
 ```
