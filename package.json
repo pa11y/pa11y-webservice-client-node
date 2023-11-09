@@ -25,9 +25,6 @@
     "request": "~2.88.2"
   },
   "devDependencies": {
-    "grunt": "~1.6.1",
-    "grunt-contrib-jshint": "~3.2.0",
-    "grunt-mocha-test": "~0.13.3",
     "mocha": "~10.2.0",
     "mockery": "~2.1.0",
     "proclaim": "~3.6.0",
@@ -35,7 +32,7 @@
   },
   "main": "./lib/client.js",
   "scripts": {
-    "test": "grunt"
+    "test": "mocha test/unit --recursive"
   },
   "files": [
     "lib"
