@@ -5,7 +5,7 @@
     "node": ">=18",
     "npm": ">=10"
   },
-  "description": "pa11y-webservice-client-node is a Node.js client library for pa11y-webservice",
+  "description": "A Node.js client library for Pa11y Webservice",
   "keywords": [
     "accessibility",
     "analysis",
