@@ -136,17 +136,12 @@ If you'd like to contribute code, get started by cloning the repo and running `n
 
 ```sh
 # Lint your contribution
-grunt lint
+npm run lint
 ```
 
 ```sh
 # Test your contribution
-grunt test
-```
-
-```sh
-# Lint and test with a single command
-grunt
+npm test
 ```
 
 ## Support and Migration
@@ -169,7 +164,6 @@ Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
 Copyright &copy; 2013–2023, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
-[grunt]: http://gruntjs.com/
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
 [info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml
