@@ -144,6 +144,35 @@ npm run lint
 npm test
 ```
 
+### Testing the GitHub Actions workflows
+
+This project's GitHub Actions workflows can be tested locally using [nektos/act](https://github.com/nektos/act), which can be installed with Homebrew:
+
+```sh
+brew install act
+```
+
+To validate the syntax of a workflow:
+
+```sh
+# Validate the publishing workflow, by triggering a 'release' event
+act --dryrun release
+```
+
+```sh
+# Validate the testing workflow
+act --dryrun push
+```
+
+To run the testing workflow locally:
+
+```sh
+# Run the testing workflow, with Node.js 18 only
+act push --matrix node-version:18
+```
+
+Add `--verbose` for more output.
+
 ## Support and Migration
 
 Major versions are normally supported for 6 months after their last minor release. This means that patch-level changes will be added and bugs will be fixed. The table below outlines the end-of-support dates for major versions, and the last minor release for that version.
