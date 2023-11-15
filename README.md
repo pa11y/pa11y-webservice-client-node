@@ -180,11 +180,13 @@ Add `--verbose` for more output.
 
 When we release a new major version we will continue to support the previous major version for 6 months. This support will be limited to fixes for critical bugs and security issues. If you're opening an issue related to this project, please mention the specific version that the issue affects.
 
-| :grey_question: | Major Version | Last Release | Node.js Versions | Support End Date |
-| :-------------- | :------------ | :----------- | :--------------- | :--------------- |
-| :heart:         | 3             | N/A          | 12+              | N/A              |
-| :hourglass:     | 2             | 2.0.0        | 8+               | 2022-05-26       |
-| :skull:         | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
+The following table lists the major versions available and, for each previous major version, its end-of-support date, and its final minor version released.
+
+| Major version   | Final minor version | Node.js support          | Support end date |
+| :-------------- | :------------------ | :----------------------- | :--------------- |
+| `3`             |                     | `>= 12`                  | ✅ Current major version |
+| `2`             | `2.0`               | `8`, `10`                | 2022-05-26       |
+| `1`             | `1.2`               | `0.10`, `0.12`, `4`, `6` | 2020-01-05       |
 
 If you're opening issues related to these, please mention the version that the issue relates to.
 
