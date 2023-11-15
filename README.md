@@ -190,8 +190,8 @@ The following table lists the major versions available and, for each previous ma
 
 ## License
 
-Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
-Copyright &copy; 2013–2023, Team Pa11y
+Licensed under the [GNU General Public License 3.0][info-license].  
+Copyright &copy; 2013-2023, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
