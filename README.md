@@ -188,8 +188,6 @@ The following table lists the major versions available and, for each previous ma
 | `2`             | `2.0`               | `8`, `10`                | 2022-05-26       |
 | `1`             | `1.2`               | `0.10`, `0.12`, `4`, `6` | 2020-01-05       |
 
-If you're opening issues related to these, please mention the version that the issue relates to.
-
 ## License
 
 Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
