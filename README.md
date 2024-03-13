@@ -30,24 +30,24 @@ client.tasks.create({
     name: 'Nature Home Page',
     url: 'nature.com',
     standard: 'WCAG2AA'
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the new task, or null if an error occurred
 });
 
 // Get all tasks
-client.tasks.get({}, function (err, tasks) {
+client.tasks.get({}, function (error, tasks) {
     // tasks  =  array of objects representing tasks, or null if an error occurred
 });
 
 // Get all tasks with last results included for each
 client.tasks.get({
     lastres: true
-}, function (err, tasks) {
+}, function (error, tasks) {
     // tasks  =  array of objects representing tasks, or null if an error occurred
 });
 
 // Get results for all tasks
-client.tasks.results({}, function (err, results) {
+client.tasks.results({}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
@@ -55,48 +55,48 @@ client.tasks.results({}, function (err, results) {
 client.tasks.results({
     from: '2023-01-01',
     to: '2023-01-31'
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get results for all tasks with full details
 client.tasks.results({
     full: true
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get a task by ID
-client.task('5231c687bbdf0f94fa000007').get({}, function (err, task) {
+client.task('5231c687bbdf0f94fa000007').get({}, function (error, task) {
     // task  =  object representing the requested task, or null if an error occurred
 });
 
 // Get a task by ID with last results included
 client.task('5231c687bbdf0f94fa000007').get({
     lastres: true
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the requested task, or null if an error occurred
 });
 
 // Edit a task by ID
 client.task('5231c687bbdf0f94fa000007').edit({
     name: 'New name'
-}, function (err, task) {
+}, function (error, task) {
     // task  =  object representing the newly updated task, or null if an error occurred
 });
 
 // Delete a task by ID
-client.task('5231c687bbdf0f94fa000007').remove(function (err) {
+client.task('5231c687bbdf0f94fa000007').remove(function (error) {
     // err  =  null if task was deleted, or an Error object if something went wrong
 });
 
 // Run a task by ID
-client.task('5231c687bbdf0f94fa000007').run(function (err) {
+client.task('5231c687bbdf0f94fa000007').run(function (error) {
     // err  =  null if task is running, or an Error object if something went wrong
 });
 
 // Get results for a task
-client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
+client.task('5231c687bbdf0f94fa000007').results({}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
@@ -104,26 +104,26 @@ client.task('5231c687bbdf0f94fa000007').results({}, function (err, results) {
 client.task('5231c687bbdf0f94fa000007').results({
     from: '2023-01-01',
     to: '2023-01-31'
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get results for a task with full details
 client.task('5231c687bbdf0f94fa000007').results({
     full: true
-}, function (err, results) {
+}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
 
 // Get a result by ID
-client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (err, result) {
+client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (error, result) {
     // task  =  object representing the requested result, or null if an error occurred
 });
 
 // Get a result by ID with full details
 client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
     full: true
-}, function (err, result) {
+}, function (error, result) {
     // task  =  object representing the requested result, or null if an error occurred
 });
 ```
@@ -136,40 +136,64 @@ If you'd like to contribute code, get started by cloning the repo and running `n
 
 ```sh
 # Lint your contribution
-grunt lint
+npm run lint
 ```
 
 ```sh
 # Test your contribution
-grunt test
+npm test
+```
+
+### Testing the GitHub Actions workflows
+
+This project's GitHub Actions workflows can be tested locally using [nektos/act](https://github.com/nektos/act), which can be installed with Homebrew:
+
+```sh
+brew install act
+```
+
+To validate the syntax of a workflow:
+
+```sh
+# Validate the publishing workflow, by triggering a 'release' event
+act --dryrun release
 ```
 
 ```sh
-# Lint and test with a single command
-grunt
+# Validate the testing workflow
+act --dryrun push
 ```
+
+To run the testing workflow locally:
+
+```sh
+# Run the testing workflow, with Node.js 18 only
+act push --matrix node-version:18
+```
+
+Add `--verbose` for more output.
 
 ## Support and Migration
 
-Major versions are normally supported for 6 months after their last minor release. This means that patch-level changes will be added and bugs will be fixed. The table below outlines the end-of-support dates for major versions, and the last minor release for that version.
+> [!NOTE]
+> We maintain a [migration guide](MIGRATION.md) to help you migrate between major versions.
 
-We also maintain a [migration guide](MIGRATION.md) to help you migrate.
+When we release a new major version we will continue to support the previous major version for 6 months. This support will be limited to fixes for critical bugs and security issues. If you're opening an issue related to this project, please mention the specific version that the issue affects.
 
-| :grey_question: | Major Version | Last Release | Node.js Versions | Support End Date |
-| :-------------- | :------------ | :----------- | :--------------- | :--------------- |
-| :heart:         | 3             | N/A          | 12+              | N/A              |
-| :hourglass:     | 2             | 2.0.0        | 8+               | 2022-05-26       |
-| :skull:         | 1             | 1.2.1        | 0.10+            | 2020-01-05       |
+The following table lists the major versions available and, for each previous major version, its end-of-support date, and its final minor version released.
 
-If you're opening issues related to these, please mention the version that the issue relates to.
+| Major version   | Final minor version | Node.js support          | Support end date |
+| :-------------- | :------------------ | :----------------------- | :--------------- |
+| `3`             |                     | `>= 12`                  | ✅ Current major version |
+| `2`             | `2.0`               | `8`, `10`                | 2022-05-26       |
+| `1`             | `1.2`               | `0.10`, `0.12`, `4`, `6` | 2020-01-05       |
 
 ## License
 
-Licensed under the [GNU General Public License 3.0](LICENSE.txt).<br/>
-Copyright &copy; 2013–2023, Team Pa11y
+Licensed under the [GNU General Public License 3.0][info-license].  
+Copyright &copy; 2013-2023, Team Pa11y
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
-[grunt]: http://gruntjs.com/
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
 [info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml

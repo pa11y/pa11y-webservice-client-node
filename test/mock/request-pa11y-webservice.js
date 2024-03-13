@@ -1,24 +1,23 @@
 // This file is part of Pa11y Webservice Node.js Client.
-// 
+//
 // Pa11y Webservice Node.js Client is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // Pa11y Webservice Node.js Client is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with Pa11y Webservice Node.js Client.  If not, see <http://www.gnu.org/licenses/>.
-
 'use strict';
 
 const sinon = require('sinon');
 
-module.exports = sinon.spy(function (opts, done) {
-	var endpoint = opts.method + ' ' + opts.url;
+module.exports = sinon.spy((opts, done) => {
+	const endpoint = `${opts.method} ${opts.url}`;
 	if (mockEndpoints[endpoint]) {
 		mockEndpoints[endpoint](opts.qs, opts.body, done);
 	} else {
@@ -32,11 +31,11 @@ module.exports = sinon.spy(function (opts, done) {
 
 const mockEndpoints = {
 
-	'GET http://pa11y-ws/tasks': function (query, body, done) {
+	'GET http://pa11y-ws/tasks'(query, body, done) {
 		return done(null, {statusCode: 200}, []);
 	},
 
-	'POST http://pa11y-ws/tasks': function (query, body, done) {
+	'POST http://pa11y-ws/tasks'(query, body, done) {
 		if (body.name && body.url && body.standard) {
 			return done(null, {statusCode: 201}, {
 				id: 'task1',
@@ -53,7 +52,7 @@ const mockEndpoints = {
 		});
 	},
 
-	'GET http://pa11y-ws/tasks/results': function (query, body, done) {
+	'GET http://pa11y-ws/tasks/results'(query, body, done) {
 		if (query.foo) {
 			return done(null, {statusCode: 400}, {
 				code: 400,
@@ -64,23 +63,23 @@ const mockEndpoints = {
 		return done(null, {statusCode: 200}, []);
 	},
 
-	'GET http://pa11y-ws/tasks/task1': function (query, body, done) {
+	'GET http://pa11y-ws/tasks/task1'(query, body, done) {
 		return done(null, {statusCode: 200}, mockTask);
 	},
 
-	'PATCH http://pa11y-ws/tasks/task1': function (query, body, done) {
+	'PATCH http://pa11y-ws/tasks/task1'(query, body, done) {
 		return done(null, {statusCode: 204}, mockTask);
 	},
 
-	'DELETE http://pa11y-ws/tasks/task1': function (query, body, done) {
+	'DELETE http://pa11y-ws/tasks/task1'(query, body, done) {
 		return done(null, {statusCode: 204}, null);
 	},
 
-	'POST http://pa11y-ws/tasks/task1/run': function (query, body, done) {
+	'POST http://pa11y-ws/tasks/task1/run'(query, body, done) {
 		return done(null, {statusCode: 202}, null);
 	},
 
-	'GET http://pa11y-ws/tasks/task1/results': function (query, body, done) {
+	'GET http://pa11y-ws/tasks/task1/results'(query, body, done) {
 		if (query.foo) {
 			return done(null, {statusCode: 400}, {
 				code: 400,
@@ -91,7 +90,7 @@ const mockEndpoints = {
 		return done(null, {statusCode: 200}, []);
 	},
 
-	'GET http://pa11y-ws/tasks/task1/results/result1': function (query, body, done) {
+	'GET http://pa11y-ws/tasks/task1/results/result1'(query, body, done) {
 		return done(null, {statusCode: 200}, mockResult);
 	}
 
