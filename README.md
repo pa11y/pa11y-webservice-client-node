@@ -4,6 +4,7 @@ This is a Node.js client library for [Pa11y Webservice][pa11y-webservice].
 
 [![Latest version published to npm][shield-npm]][info-npm]
 [![Node.js version support][shield-node]][info-node]
+[![Supports pa11y-webservice@4 API][shield-api]][pa11y-webservice]
 [![Build status][shield-build]][info-build]
 [![LGPL-3.0 licensed][shield-license]][info-license]
 
@@ -195,11 +196,14 @@ Copyright &copy; 2013-2024, Team Pa11y
 
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
+
 [info-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/pa11y-webservice-client-node
+
 [shield-build]: https://github.com/pa11y/pa11y-webservice-client-node/actions/workflows/tests.yml/badge.svg
 [shield-license]: https://img.shields.io/badge/license-LGPL%203.0-blue.svg
 [shield-node]: https://img.shields.io/node/v/pa11y-webservice-client-node.svg
 [shield-npm]: https://img.shields.io/npm/v/pa11y-webservice-client-node.svg
+[shield-api]: https://img.shields.io/badge/api-pa11y--webservice@4-blue.svg
