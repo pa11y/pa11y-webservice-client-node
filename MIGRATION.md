@@ -4,12 +4,12 @@ This package's API and/or supported set of environments changes between major ve
 
 ## Migrating to 4 from 3
 
-1. Upgrade to Node.js 18 or above.
+1. Upgrade to Node.js 18 or 20.
 
 ## Migrating to 3 from 2
 
-1. Upgrade to Node.js 12 or above. 
+1. Upgrade to Node.js 12, 14, or 16.
 
 ## Migrating to 2 from 1
 
-1. Upgrade to Node.js 8 or above.
+1. Upgrade to Node.js 8 or 10.
