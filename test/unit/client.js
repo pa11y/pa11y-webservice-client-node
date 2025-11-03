@@ -5,27 +5,22 @@
 'use strict';
 
 const assert = require('proclaim');
-const mockery = require('mockery');
+const quibble = require('quibble');
 
 describe('pa11y-webservice-client-node', () => {
 	let pwcn;
 	let request;
 
 	beforeEach(() => {
-		mockery.enable({
-			useCleanCache: true,
-			warnOnUnregistered: false,
-			warnOnReplace: false
-		});
-
 		request = require('../mock/request-pa11y-webservice');
-		mockery.registerMock('request', request);
+		request.resetHistory();
+		quibble('request', request);
 
 		pwcn = require('../../lib/client');
 	});
 
 	afterEach(() => {
-		mockery.disable();
+		quibble.reset();
 	});
 
 	it('should be a function', () => {
