@@ -5,22 +5,42 @@
 'use strict';
 
 const assert = require('proclaim');
-const quibble = require('quibble');
+
+function getQueryParams(fetchCall) {
+	const url = new URL(fetchCall.args[0]);
+	const params = {};
+	url.searchParams.forEach((value, key) => {
+		params[key] = value;
+	});
+	return params;
+}
+
+function stringifyQuery(query) {
+	const result = {};
+	Object.entries(query).forEach(([key, value]) => {
+		result[key] = String(value);
+	});
+	return result;
+}
 
 describe('pa11y-webservice-client-node', () => {
 	let pwcn;
-	let request;
+	let mockFetch;
+	let originalFetch;
 
 	beforeEach(() => {
-		request = require('../mock/request-pa11y-webservice');
-		request.resetHistory();
-		quibble('request', request);
+		mockFetch = require('../mock/request-pa11y-webservice');
+		mockFetch.resetHistory();
 
+		originalFetch = global.fetch;
+		global.fetch = mockFetch;
+
+		delete require.cache[require.resolve('../../lib/client')];
 		pwcn = require('../../lib/client');
 	});
 
 	afterEach(() => {
-		quibble.reset();
+		global.fetch = originalFetch;
 	});
 
 	it('should be a function', () => {
@@ -112,7 +132,8 @@ describe('pa11y-webservice-client-node', () => {
 						lastres: true
 					};
 					client.tasks.get(query, () => {
-						assert.deepEqual(request.getCall(0).args[0].qs, query);
+						const actualParams = getQueryParams(mockFetch.getCall(0));
+						assert.deepEqual(actualParams, stringifyQuery(query));
 						done();
 					});
 				});
@@ -142,7 +163,8 @@ describe('pa11y-webservice-client-node', () => {
 						full: true
 					};
 					client.tasks.results(query, () => {
-						assert.deepEqual(request.getCall(0).args[0].qs, query);
+						const actualParams = getQueryParams(mockFetch.getCall(0));
+						assert.deepEqual(actualParams, stringifyQuery(query));
 						done();
 					});
 				});
@@ -212,7 +234,8 @@ describe('pa11y-webservice-client-node', () => {
 							lastres: true
 						};
 						client.task('task1').get(query, () => {
-							assert.deepEqual(request.getCall(0).args[0].qs, query);
+							const actualParams = getQueryParams(mockFetch.getCall(0));
+							assert.deepEqual(actualParams, stringifyQuery(query));
 							done();
 						});
 					});
@@ -301,7 +324,8 @@ describe('pa11y-webservice-client-node', () => {
 							full: true
 						};
 						client.task('task1').results(query, () => {
-							assert.deepEqual(request.getCall(0).args[0].qs, query);
+							const actualParams = getQueryParams(mockFetch.getCall(0));
+							assert.deepEqual(actualParams, stringifyQuery(query));
 							done();
 						});
 					});
@@ -357,7 +381,8 @@ describe('pa11y-webservice-client-node', () => {
 									full: true
 								};
 								client.task('task1').result('result1').get(query, () => {
-									assert.deepEqual(request.getCall(0).args[0].qs, query);
+									const actualParams = getQueryParams(mockFetch.getCall(0));
+									assert.deepEqual(actualParams, stringifyQuery(query));
 									done();
 								});
 							});
