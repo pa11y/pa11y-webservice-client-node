@@ -249,7 +249,7 @@ The following table lists the major versions available and, for each previous ma
 ## License
 
 Licensed under the [Lesser General Public License (LGPL-3.0-only)][info-license].  
-Copyright &copy; 2013-2024, Team Pa11y
+Copyright &copy; 2013-2025, Team Pa11y
 
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
