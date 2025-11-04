@@ -4,20 +4,58 @@
  */
 'use strict';
 
-const sinon = require('sinon');
+const callHistory = [];
 
-module.exports = sinon.spy((opts, done) => {
-	const endpoint = `${opts.method} ${opts.url}`;
-	if (mockEndpoints[endpoint]) {
-		mockEndpoints[endpoint](opts.qs, opts.body, done);
-	} else {
-		done(null, {statusCode: 404}, {
-			code: 404,
-			error: 'Not Found',
-			message: 'foo'
-		});
+function mockFetch(url, options) {
+	callHistory.push({args: [url, options]});
+	const parsedUrl = new URL(url);
+	const method = options?.method || 'GET';
+	const endpoint = `${method} ${parsedUrl.origin}${parsedUrl.pathname}`;
+
+	const query = {};
+	parsedUrl.searchParams.forEach((value, key) => {
+		query[key] = value;
+	});
+
+	let body = null;
+	if (options?.body) {
+		body = JSON.parse(options.body);
 	}
-});
+
+	return new Promise(resolve => {
+		const done = (error, response, responseBody) => {
+			const headersMap = new Map([['content-type', 'application/json']]);
+			const mockResponse = {
+				status: response.statusCode,
+				statusCode: response.statusCode,
+				headers: {
+					get: key => headersMap.get(key.toLowerCase())
+				},
+				json: () => Promise.resolve(responseBody),
+				text: () => Promise.resolve(JSON.stringify(responseBody))
+			};
+			resolve(mockResponse);
+		};
+
+		if (mockEndpoints[endpoint]) {
+			mockEndpoints[endpoint](query, body, done);
+		} else {
+			done(null, {statusCode: 404}, {
+				code: 404,
+				error: 'Not Found',
+				message: 'foo'
+			});
+		}
+	});
+}
+
+// Add spy-like methods for compatibility with existing tests
+mockFetch.getCall = index => callHistory[index];
+mockFetch.resetHistory = () => {
+	callHistory.length = 0;
+};
+
+module.exports = mockFetch;
 
 const mockEndpoints = {
 
