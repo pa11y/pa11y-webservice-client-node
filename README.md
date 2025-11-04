@@ -31,8 +31,6 @@ const client = createClient('http://localhost:3000/');
 
 ### Create a task
 
-`tasks.create`
-
 ```js
 client.tasks.create({
     name: 'Nature Home Page',
@@ -44,8 +42,6 @@ client.tasks.create({
 ```
 
 ### Fetch details about tasks
-
- with `tasks.get()` and `task(id).get()`
 
 ```js
 // Get all tasks
@@ -76,8 +72,6 @@ client.task(taskId).get({ lastres: true }, function (error, task) {
 ```
 
 ### Fetching tasks' results
-
- with `client.tasks.results()`
 
 ```js
 // Get results for all tasks
@@ -155,8 +149,6 @@ client.task(taskId).results({}, function (error, results) {
 
 ### Edit a task
 
-`task(id).edit()`
-
 ```js
 client.task('5231c687bbdf0f94fa000007').edit({
     name: 'New name'
@@ -167,8 +159,6 @@ client.task('5231c687bbdf0f94fa000007').edit({
 
 ### Remove a task
 
- with `task(id).remove()`
-
 ```js
 client.task(taskId).remove(function (error) {
     // error: null if task deleted; Error object if error
@@ -176,8 +166,6 @@ client.task(taskId).remove(function (error) {
 ```
 
 ### Run a task
-
- with `task(id).run()`
 
 ```js
 client.task(taskId).run(function (error) {
