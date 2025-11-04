@@ -20,112 +20,156 @@ npm install --save-dev pa11y-webservice-client-node
 
 For information about Pa11y Webservice's endpoints and resource types, [read the documentation][wiki-web-service].
 
+### Creating a client
+
 ```js
 const createClient = require('pa11y-webservice-client-node');
 
 // Create client with the base URL of your instance of Pa11y Webservice
 const client = createClient('http://localhost:3000/');
+```
 
-// Create a task
+### Create a task
+
+```js
 client.tasks.create({
     name: 'Nature Home Page',
     url: 'nature.com',
     standard: 'WCAG2AA'
 }, function (error, task) {
-    // task  =  object representing the new task, or null if an error occurred
+    // task: object if created; null if error occurred
 });
+```
 
+### Fetch details about tasks
+
+```js
 // Get all tasks
 client.tasks.get({}, function (error, tasks) {
-    // tasks  =  array of objects representing tasks, or null if an error occurred
+    // tasks: array of task objects; null if error
 });
+```
 
-// Get all tasks with last results included for each
-client.tasks.get({
-    lastres: true
-}, function (error, tasks) {
-    // tasks  =  array of objects representing tasks, or null if an error occurred
+```js
+// Get all tasks, including most recent results for each
+client.tasks.get({ lastres: true }, function (error, tasks) {
+    // tasks: array of task object; null if error
 });
+```
 
+```js
+// Get a single task
+client.task(taskId).get({}, function (error, task) {
+    // task: object; null if error
+});
+```
+
+```js
+// Get a single task, including its most recent results
+client.task(taskId).get({ lastres: true }, function (error, task) {
+    // task: object; null if error
+});
+```
+
+### Fetching tasks' results
+
+```js
 // Get results for all tasks
-client.tasks.results({}, function (error, results) {
-    // results  =  array of objects representing results, or null if an error occurred
+client.tasks.results({}, (error, results) => {
+    // results: array of result objects; null if error
 });
+```
 
+```js
 // Get results for all tasks within a date range
-client.tasks.results({
+const options = {
     from: '2023-01-01',
     to: '2023-01-31'
-}, function (error, results) {
-    // results  =  array of objects representing results, or null if an error occurred
-});
+};
 
+client.tasks.results(options, (error, results) => {
+    // results: array of result objects; null if error
+});
+```
+
+```js
 // Get results for all tasks with full details
-client.tasks.results({
+const options = {
     full: true
-}, function (error, results) {
-    // results  =  array of objects representing results, or null if an error occurred
-});
+};
 
-// Get a task by ID
-client.task('5231c687bbdf0f94fa000007').get({}, function (error, task) {
-    // task  =  object representing the requested task, or null if an error occurred
+client.tasks.results(options, (error, results) => {
+    // results: array of result objects; null if error
 });
+```
 
-// Get a task by ID with last results included
-client.task('5231c687bbdf0f94fa000007').get({
-    lastres: true
-}, function (error, task) {
-    // task  =  object representing the requested task, or null if an error occurred
-});
-
-// Edit a task by ID
-client.task('5231c687bbdf0f94fa000007').edit({
-    name: 'New name'
-}, function (error, task) {
-    // task  =  object representing the newly updated task, or null if an error occurred
-});
-
-// Delete a task by ID
-client.task('5231c687bbdf0f94fa000007').remove(function (error) {
-    // err  =  null if task was deleted, or an Error object if something went wrong
-});
-
-// Run a task by ID
-client.task('5231c687bbdf0f94fa000007').run(function (error) {
-    // err  =  null if task is running, or an Error object if something went wrong
-});
-
-// Get results for a task
-client.task('5231c687bbdf0f94fa000007').results({}, function (error, results) {
-    // results  =  array of objects representing results, or null if an error occurred
-});
-
+```js
 // Get results for a task within a date range
 client.task('5231c687bbdf0f94fa000007').results({
     from: '2023-01-01',
     to: '2023-01-31'
 }, function (error, results) {
-    // results  =  array of objects representing results, or null if an error occurred
+    // results: array of result objects; null if error
 });
+```
 
+```js
 // Get results for a task with full details
-client.task('5231c687bbdf0f94fa000007').results({
+client.task(taskId).results({
     full: true
 }, function (error, results) {
+    // results: array of result objects; null if error
+});
+```
+
+```js
+// Get one result
+client.task(taskId).result(resultId).get({}, (error, result) => {
+    // result: object; null if error
+});
+```
+
+```js
+// Get one result with full details
+const options = {
+    full: true
+};
+
+client.task(taskId).result(resultId).get(options, (error, result) => {
+    // result: object; null if error
+});
+```
+
+```js
+// Get results for a task
+client.task(taskId).results({}, function (error, results) {
     // results  =  array of objects representing results, or null if an error occurred
 });
+```
 
-// Get a result by ID
-client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({}, function (error, result) {
-    // task  =  object representing the requested result, or null if an error occurred
+### Edit a task
+
+```js
+client.task('5231c687bbdf0f94fa000007').edit({
+    name: 'New name'
+}, function (error, task) {
+    // task  =  object representing the newly updated task, or null if an error occurred
 });
+```
 
-// Get a result by ID with full details
-client.task('5231c687bbdf0f94fa000007').result('523c0ee0ca452f0000000009').get({
-    full: true
-}, function (error, result) {
-    // task  =  object representing the requested result, or null if an error occurred
+### Remove a task
+
+```js
+client.task(taskId).remove(function (error) {
+    // error: null if task deleted; Error object if error
+});
+```
+
+### Run a task
+
+```js
+client.task(taskId).run(function (error) {
+    // error: null if task is now running; Error object if error
 });
 ```
 
@@ -193,7 +237,7 @@ The following table lists the major versions available and, for each previous ma
 ## License
 
 Licensed under the [Lesser General Public License (LGPL-3.0-only)][info-license].  
-Copyright &copy; 2013-2024, Team Pa11y
+Copyright &copy; 2013-2025, Team Pa11y
 
 [pa11y-webservice]: https://github.com/pa11y/pa11y-webservice
 [wiki-web-service]: https://github.com/pa11y/pa11y-webservice/wiki/Web-Service-Endpoints
