@@ -212,15 +212,15 @@ act --dryrun push
 To run the testing workflow locally:
 
 ```sh
-# Run the testing workflow, with Node.js 18 only
-act push --matrix node-version:18
+# Run the testing workflow, with Node.js 24 only
+act push --matrix node-version:24
 ```
 
 Add `--verbose` for more output.
 
 ## Support and Migration
 
-> [!NOTE]
+> [!TIP]
 > We maintain a [migration guide](MIGRATION.md) to help you migrate between major versions.
 
 When we release a new major version we will continue to support the previous major version for 6 months. This support will be limited to fixes for critical bugs and security issues. If you're opening an issue related to this project, please mention the specific version that the issue affects.
@@ -229,7 +229,8 @@ The following table lists the major versions available and, for each previous ma
 
 | Major version   | Final minor version | Node.js support          | Support end date |
 | :-------------- | :------------------ | :----------------------- | :--------------- |
-| `4`             |                     | `18`, `20`               | ✅ Current major version |
+| `5`             |                     | `20`, `22`, `24`         | ✅ Current major version |
+| `4`             | `4.0`               | `18`, `20`               | May 2026 |
 | `3`             | `3.0`               | `12`, `14`, `16`         | September 2024   |
 | `2`             | `2.0`               | `8`, `10`                | 2022-05-26       |
 | `1`             | `1.2`               | `0.10`, `0.12`, `4`, `6` | 2020-01-05       |
