@@ -2,6 +2,12 @@
 
 For versions below `4.0.0`, see the project's [tags](https://github.com/pa11y/pa11y-webservice-client-node/tags) on GitHub.
 
+## 5.0.0
+
+* **Major:** Require Node.js `20`, `22` or `24`; Node.js `18` is no longer supported
+* **Major:** Dependency `request` is no longer supplied
+* Improve project verification and publishing
+
 ## 4.0.0
 
 ### Changes
