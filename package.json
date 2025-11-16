@@ -21,9 +21,9 @@
   "bugs": "https://github.com/pa11y/pa11y-webservice-client-node/issues",
   "license": "LGPL-3.0-only",
   "devDependencies": {
-    "eslint": "^8.57.1",
+    "eslint": "^9.39.1",
+    "eslint-config-pa11y": "^4.0.0",
     "mocha": "^11.7.4",
-    "pa11y-lint-config": "^3.0.0",
     "proclaim": "^3.6.0"
   },
   "main": "./lib/client.js",
